@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+</head>
+<body>
+
+    <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-light px-5">
+            <div class="container-fluid">
+            <a class="navbar-brand title" href="#">Vishnu Saini</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#project">Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </div>
+
+    <section id="home">
+        <div class="container">
+            <h1>Hi,I'm Vishnu</h1>
+            <p>A Web Developer</p>
+        </div>
+        <a href="#about" class="icon">
+            <i class="fa-solid fa-angle-down"></i>
+        </a>
+    </section>
+
+    <section id="about">
+        <div class="container-fluid text-white">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 text-center px-5">
+                    <h1 class="mb-4">About Me</h1>
+                    <div class="img m-auto my-4">
+                        <img src="/img/user.jpg"  alt="">
+                    </div>
+                    <p class="fs-6" style="text-align: justify;">I am 22 year old, MCA student, studied at GLA University. I really enjoy solving problems as well as making things pretty and easy to use. I can't stop learning new things; the more, the better.</p>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+                    <h1 class="mb-4">Skills</h1>
+                    <div class="row gap-3">
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="imgbx" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="HTML">
+                                <img src="/img/html.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="imgbx" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="CSS">
+                                <img src="/img/css-3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 sm-12">
+                            <div class="imgbx" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="JavaScript">
+                                <img src="/img/java-script.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 sm-12">
+                            <div class="imgbx" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Bootstrap">
+                                <img src="/img/bootstrap.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 sm-12">
+                            <div class="imgbx" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Java">
+                                <img src="/img/java.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 sm-12">
+                            <div class="imgbx" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Nodejs">
+                                <img src="/img/nodejs.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 sm-12">
+                            <div class="imgbx" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="MySQL">
+                                <img src="/img/mysql.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project">
+        <h1>Project</h1>
+    </section>
+
+    <section id="contact">
+        <div class="container text-center">
+            <h1>Contact</h1>
+            <ul class="social-links">
+                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-phone"></i></a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <script>
+        jQuery(function($){
+            var $navbar = $('.navbar');
+            var $win = $(window);
+            var winH = $win.height();   
+            $(window).scroll(function(event){
+                var $current = $(this).scrollTop();
+                if($current > winH-10){
+                    $navbar.addClass('navbar-color');
+                }else {
+                    $navbar.removeClass('navbar-color');
+                }
+            });
+        });
+    </script>
+    <script src="popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+</body>
+</html>
