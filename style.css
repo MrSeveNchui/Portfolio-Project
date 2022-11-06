@@ -27,6 +27,14 @@ html {
     background-color: #07374a;
 }
 
+.navbar-brand {
+    display: none;
+}
+
+.navbar-brand.show {
+    display: block;
+} 
+
 .title {
     font-size: 25px !important;
     font-weight: 700;

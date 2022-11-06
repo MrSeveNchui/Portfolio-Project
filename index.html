@@ -16,7 +16,7 @@
         <nav class="navbar navbar-expand-lg navbar-light px-5">
             <div class="container-fluid">
             <a class="navbar-brand title" href="#">Vishnu Saini</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -121,15 +121,23 @@
     <script>
         jQuery(function($){
             var $navbar = $('.navbar');
+            var $navbarBrand =$('.navbar-brand');
             var $win = $(window);
-            var winH = $win.height();   
+            var winH = $win.height();
+
             $(window).scroll(function(event){
                 var $current = $(this).scrollTop();
                 if($current > winH-10){
                     $navbar.addClass('navbar-color');
+                    $navbarBrand.addClass('show');
                 }else {
                     $navbar.removeClass('navbar-color');
+                    $navbarBrand.removeClass('show');
                 }
+            });
+
+            $('.navbar-collapse a').click(function(){
+                $(".navbar-collapse").collapse('hide');
             });
         });
     </script>
