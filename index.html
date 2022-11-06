@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 </head>
 <body>
 
@@ -117,11 +116,19 @@
             </ul>
         </div>
     </section>
-    
+
+    <script src="popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
     <script>
         jQuery(function($){
             var $navbar = $('.navbar');
             var $navbarBrand =$('.navbar-brand');
+            var $imgHover = $('.img img');
             var $win = $(window);
             var winH = $win.height();
 
@@ -130,9 +137,11 @@
                 if($current > winH-10){
                     $navbar.addClass('navbar-color');
                     $navbarBrand.addClass('show');
+                    $imgHover.removeClass('bounce');
                 }else {
                     $navbar.removeClass('navbar-color');
                     $navbarBrand.removeClass('show');
+                    $imgHover.addClass('bounce');
                 }
             });
 
@@ -140,12 +149,6 @@
                 $(".navbar-collapse").collapse('hide');
             });
         });
-    </script>
-    <script src="popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
 </body>
 </html>
